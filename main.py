@@ -6,10 +6,9 @@ from money_machine import MoneyMachine
 ingredients_report = CoffeeMaker()
 money_machine = MoneyMachine()
 menu = Menu()
+
+
 is_on = True
-
-
-'''This will print out total profits and ingredient report'''
 
 
 while is_on:
@@ -24,8 +23,6 @@ while is_on:
         drink = menu.find_drink(choice)
         if ingredients_report.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
                 ingredients_report.make_coffee(drink)
-
-
 
 
 
